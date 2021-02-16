@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  cli-app:
+    container_name: cli-app
+    volumes:
+      - ../:/app
+    build:
+      context: ../
+      dockerfile: docker/DockerFile
+    tty: true
+    stdin_open: true
+    env_file:
+      - local.env
+
