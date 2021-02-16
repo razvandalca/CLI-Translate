@@ -1,0 +1,12 @@
+FROM python:3.7
+WORKDIR /app
+COPY . /app
+
+RUN pip install --upgrade pip
+RUN pip --no-cache-dir install -r docker/requirements.txt
+
+ENV GOOGLE_APPLICATION_CREDENTIALS=docker/cliproject-510eb70c04e0.json
+
+RUN pip install -e .
+
+
