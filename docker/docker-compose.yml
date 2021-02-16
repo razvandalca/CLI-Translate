@@ -9,4 +9,6 @@ services:
       dockerfile: docker/DockerFile
     tty: true
     stdin_open: true
+    env_file:
+      - local.env
 
